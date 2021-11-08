@@ -1,0 +1,10 @@
+hazelcast-client:
+  cluster-name: YOUR_CLUSTER_NAME
+  properties:
+    hazelcast.client.cloud.url: YOUR_DISCOVERY_URL
+  network:
+    hazelcast-cloud:
+      enabled: true
+      discovery-token: YOUR_CLUSTER_DISCOVERY_TOKEN
+  metrics:
+    enabled: true
