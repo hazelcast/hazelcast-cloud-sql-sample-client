@@ -2,15 +2,16 @@ hazelcast-client:
   cluster-name: YOUR_CLUSTER_NAME
   properties:
     hazelcast.client.cloud.url: YOUR_DISCOVERY_URL
-    javax.net.ssl.keyStore: YOUR_SSL_PASSWORD
-    javax.net.ssl.keyStorePassword: YOUR_SSL_PASSWORD
-    javax.net.ssl.trustStore:
-    javax.net.ssl.trustStorePassword: YOUR_SSL_PASSWORD
   network:
     hazelcast-cloud:
       enabled: true
       discovery-token: YOUR_CLUSTER_DISCOVERY_TOKEN
     ssl: 
       enabled: true
+      properties:
+        keyStore: client.keystore
+        keyStorePassword: YOUR_SSL_PASSWORD
+        trustStore: client.truststore
+        trustStorePassword: YOUR_SSL_PASSWORD
   metrics:
     enabled: true
